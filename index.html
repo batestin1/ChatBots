@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Chatbot Portifólios</title>
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const sectionPosition = section.offsetTop - headerHeight;
+        window.scrollTo({
+          top: sectionPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-text-1"> Chatbot Portifólios </div>
+      <div class="button-container">
+        <button class="batestin" onclick="scrollToSection('batestin')">Batestin Bot</button>
+        <button class="pokemon" onclick="scrollToSection('pokemon')">ChatPokemon</button>
+        <button class="cinebot" onclick="scrollToSection('cinebot')">CineBot</button>
+      </div>
+    </div>
+  </header>
+  
+  <section id="batestin">
+    <div class="chat-section">
+      <h2> Batestin Bot </h2>
+      <iframe src='https://webchat.botframework.com/embed/botBatestin?s=7FhtoNaWPmg.yTPV1J_a3F-eE9EblSCtKT85VVEfRfHnSU2D1WCJJ7A' style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+    </div>
+  </section>
+  
+  <section id="pokemon"> 
+    <div class="chat-section">
+      <h2> ChatPokemon </h2>
+      <iframe src='https://webchat.botframework.com/embed/PokeChatbot?s=E1iAGjA7Dds.v8oILiYV8yRYlCZDbA4HYF98oP4yQDe8wHufw14inPU'  style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+    </div>
+  </section>
+  
+  <section id="cinebot"> 
+    <div class="chat-section">
+      <h2> CineBot </h2>
+      <iframe src='https://webchat.botframework.com/embed/cinebot2023?s=G2j7pD0x5R4.iZcEr5XUGPMaCCzYt-idLOEVkBEpm1mskc78lyLF9cw'  style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+    </div>
+  </section>
+</body>
+</html>
