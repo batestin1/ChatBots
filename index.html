@@ -11,7 +11,8 @@
       const section = document.getElementById(sectionId);
       if (section) {
         const headerHeight = document.querySelector('.header').offsetHeight;
-        const sectionPosition = section.offsetTop - headerHeight;
+        const webchatHeight = -300; // Altura do webchat, ajuste conforme necessário
+        const sectionPosition = section.offsetTop + (section.offsetHeight - webchatHeight) / 2 - headerHeight;
         window.scrollTo({
           top: sectionPosition,
           behavior: 'smooth'
@@ -26,7 +27,7 @@
       <div class="header-text-1"> Chatbot Portifólios </div>
       <div class="button-container">
         <button class="batestin" onclick="scrollToSection('batestin')">Batestin Bot</button>
-        <button class="pokemon" onclick="scrollToSection('pokemon')">ChatPokemon</button>
+        <button class="pokemon" onclick="scrollToSection('pokemon')">PokeChatbot</button>
         <button class="cinebot" onclick="scrollToSection('cinebot')">CineBot</button>
       </div>
     </div>
@@ -34,22 +35,25 @@
   
   <section id="batestin">
     <div class="chat-section">
-      <h2> Batestin Bot </h2>
-      <iframe src='https://webchat.botframework.com/embed/botBatestin?s=7FhtoNaWPmg.yTPV1J_a3F-eE9EblSCtKT85VVEfRfHnSU2D1WCJJ7A' style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+      <h2> BatestinBot </h2>
+      <iframe src='https://webchat.botframework.com/embed/botBatestin?s=7FhtoNaWPmg.yTPV1J_a3F-eE9EblSCtKT85VVEfRfHnSU2D1WCJJ7A' 
+      style='min-width: 600px; width: 100%; min-height: 200px; margin-top: 60%;'></iframe>
     </div>
   </section>
   
   <section id="pokemon"> 
     <div class="chat-section">
-      <h2> ChatPokemon </h2>
-      <iframe src='https://webchat.botframework.com/embed/PokeChatbot?s=E1iAGjA7Dds.v8oILiYV8yRYlCZDbA4HYF98oP4yQDe8wHufw14inPU'  style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+      <h2> PokeChatbot </h2>
+      <iframe src='https://webchat.botframework.com/embed/PokeChatbot?s=E1iAGjA7Dds.v8oILiYV8yRYlCZDbA4HYF98oP4yQDe8wHufw14inPU'  
+      style='min-width: 600px; width: 100%; min-height: 200px; margin-top: 60%;'></iframe>
     </div>
   </section>
   
   <section id="cinebot"> 
     <div class="chat-section">
       <h2> CineBot </h2>
-      <iframe src='https://webchat.botframework.com/embed/cinebot2023?s=G2j7pD0x5R4.iZcEr5XUGPMaCCzYt-idLOEVkBEpm1mskc78lyLF9cw'  style='min-width: 800px; width: 100%; min-height: 400px;'></iframe>
+      <iframe src='https://webchat.botframework.com/embed/cinebot2023?s=G2j7pD0x5R4.iZcEr5XUGPMaCCzYt-idLOEVkBEpm1mskc78lyLF9cw'  
+      style='min-width: 600px; width: 100%; min-height: 200px; margin-top: 60%;'></iframe>
     </div>
   </section>
 </body>
